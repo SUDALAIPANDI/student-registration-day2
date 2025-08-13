@@ -1,109 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Project Registration Form</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: black;
-            color: white;
-            padding: 20px;
-        }
-        .form-container {
-            background: #222;
-            max-width: 400px;
-            margin: auto;
-            padding: 20px;
-            border-radius: 8px;
-            border: 1px solid #555;
-            box-shadow: 0 0 10px rgba(255,255,255,0.1);
-        }
-        .form-container h2 {
-            text-align: center;
-            margin-bottom: 15px;
-            color: #09f4ec;
-        }
-        .form-container label {
-            display: block;
-            margin-top: 10px;
-        }
-        .form-container input, select {
-            width: 100%;
-            padding: 8px;
-            margin-top: 4px;
-            border: 1px solid #aaa;
-            border-radius: 4px;
-            background-color: #333;
-            color: white;
-        }
-        .form-container button {
-            margin-top: 15px;
-            padding: 10px;
-            width: 100%;
-            border: none;
-            background-color: #00ffcc;
-            color: black;
-            font-size: 16px;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        .form-container button:hover {
-            background-color: #00cc99;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profile Cards</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <h1>Team Profiles</h1>
+  <button id="addProfileBtn">➕ Add Profile</button>
+  <div id="cardContainer"></div>
 
-<div class="form-container">
-    <h2>Project Registration</h2>
-    <form id="regForm">
-        <label>Name:</label>
-        <input type="text" id="name">
-
-        <label>Email:</label>
-        <input type="text" id="email">
-
-        <label>Department:</label>
-        <input type="text" id="dept">
-
-        <label>Year:</label>
-        <select id="year">
-            <option value="">Select Year</option>
-            <option>1st Year</option>
-            <option>2nd Year</option>
-            <option>3rd Year</option>
-            <option>4th Year</option>
-        </select>
-
-        <label>Project Title:</label>
-        <input type="text" id="title">
-
-        <button type="button" onclick="validateForm()">Submit</button>
-    </form>
-</div>
-
-<script>
-function validateForm() {
-    let name = document.getElementById("name").value.trim();
-    let email = document.getElementById("email").value.trim();
-    let dept = document.getElementById("dept").value.trim();
-    let year = document.getElementById("year").value;
-    let title = document.getElementById("title").value.trim();
-
-    if (!name || !email || !dept || !year || !title) {
-        alert("Please fill all fields.");
-        return;
-    }
-
-    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailPattern.test(email)) {
-        alert("Please enter a valid email.");
-        return;
-    }
-
-    alert("Registration Successful");
-}
-</script>
-
+  <script type="module" src="main.js"></script>
 </body>
 </html>
